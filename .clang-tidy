@@ -1,6 +1,6 @@
 ---
-Checks:          '*,-fuchsia-*,-bugprone-exception-escape,-cert-dcl50-cpp,-cppcoreguidelines-pro-type-vararg,-hicpp-vararg,-cert-err58-cpp,-readability-redundant-access-specifiers'
-WarningsAsErrors: '*,-fuchsia-*,-bugprone-exception-escape,-cert-dcl50-cpp,-cppcoreguidelines-pro-type-vararg,-hicpp-vararg,-cert-err58-cpp,-readability-redundant-access-specifiers'
+Checks:          '*,-fuchsia-*,-bugprone-exception-escape,-cert-dcl50-cpp,-cppcoreguidelines-pro-type-vararg,-hicpp-vararg,-cert-err58-cpp,-readability-redundant-access-specifiers,-cppcoreguidelines-avoid-magic-numbers,-readability-magic-numbers'
+WarningsAsErrors: '*,-fuchsia-*,-bugprone-exception-escape,-cert-dcl50-cpp,-cppcoreguidelines-pro-type-vararg,-hicpp-vararg,-cert-err58-cpp,-readability-redundant-access-specifiers,-cppcoreguidelines-avoid-magic-numbers,-readability-magic-numbers'
 HeaderFilterRegex: ''
 AnalyzeTemporaryDtors: false
 FormatStyle:     none
