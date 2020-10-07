@@ -5,6 +5,8 @@
 #ifndef PAKET_OS_HPP
 #define PAKET_OS_HPP
 
+#include <paket/os_fwd.hpp>
+
 namespace paket {
 class os {
 public:
