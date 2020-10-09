@@ -9,6 +9,12 @@ dist: bionic
 services:
   - docker
 
+
+notifications:
+  email:
+    on_success: change
+    on_failure: always
+
 ################################################################################
 ################################################################################
 # Base Configuration
