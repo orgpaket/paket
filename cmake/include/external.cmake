@@ -9,3 +9,6 @@ endif()
 if(ENABLE_COVERAGE)
   find_package(Vanadium REQUIRED COMPONENTS Coverage)
 endif()
+
+find_package(Boost REQUIRED)
+find_package(lyra REQUIRED)
