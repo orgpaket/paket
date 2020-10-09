@@ -29,7 +29,7 @@ function(target_vanadium_cmake_codegen TARGETNAME LINK_TYPE INDIR INSTALL_FLAG )
 
   foreach(INFILE ${CMAKE_HEADER_LIST})
     file(RELATIVE_PATH REL_INFILE ${INDIR} ${INFILE})
-    string(REPLACE ".cmake.in" "" REL_OUTFILE ${REL_INFILE})
+    string(REPLACE ".cmake.codegen" "" REL_OUTFILE ${REL_INFILE})
     set(OUTFILE "${INC_OUTDIR}/${REL_OUTFILE}")
     configure_file(${INFILE} ${OUTFILE} @ONLY)
   endforeach()
