@@ -11,3 +11,4 @@ target_include_directories(
 
 add_subdirectory(codegen)
 add_subdirectory(lib)
+add_subdirectory(bin)
