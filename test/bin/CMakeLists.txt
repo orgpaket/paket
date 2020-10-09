@@ -39,6 +39,7 @@ add_test(
   --output-data ${OUTPUT_DATA_ABSPATH}
   )
 set_property(TEST test.t PROPERTY LABELS UnitTest)
+add_subdirectory(test)
 if(ENABLE_COVERAGE)
   vanadium_test_enable_coverage(test.t.all test.t)
   vanadium_end_coverage_group(test.t.all)

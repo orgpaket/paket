@@ -32,23 +32,7 @@ auto main(int argc, char* argv[]) -> int
     return return_code;
   }
 
-  // Check if we have found the correct test data repository.
-  path_prefix = basepaket::path_info(
-    input_prefix,
-    output_prefix + "/"
-      + std::to_string(std::chrono::duration_cast<std::chrono::seconds>(
-                         std::chrono::system_clock::now().time_since_epoch())
-                         .count()));
-  auto const input_filename = input_prefix + std::string("/.paket");
-  auto input_file = std::ifstream(input_filename);
-  std::string input_data;
-  input_file >> input_data;
-
-  if (input_data != std::string("paket")) {
-    std::cout << "Test Input Directory is Invalid" << std::endl;
-    return EXIT_FAILURE;
-  }
-
+  path_prefix = basepaket::path_info(input_prefix, output_prefix);
   // Run all the Tests
   return session.run();
 }

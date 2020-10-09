@@ -14,7 +14,6 @@ namespace basepaket {
 path_info::path_info(std::string input, std::string output)
 : input_(std::move(input)), output_(std::move(output))
 {
-  std::filesystem::create_directories(output_);
 }
 
 auto path_info::input() const noexcept -> std::string const&
