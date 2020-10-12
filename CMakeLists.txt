@@ -9,8 +9,9 @@ project(
   VERSION 0.0.0.0
   DESCRIPTION "paket"
   LANGUAGES CXX
-  HOMEPAGE_URL "https://github.com/orgpaket/paket"
+  HOMEPAGE_URL "https://orgpaket.github.io"
   )
+set(PROJECT_REPOSITORY_URL "https://github.com/orgpaket/paket")
 list(APPEND CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake/module")
 include(GNUInstallDirs)
 
