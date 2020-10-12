@@ -1,6 +1,6 @@
 <!---------------------------------------------------------------------------->
-<!-- SPDX-License-Identifier: "Apache-2.0 OR MIT"                           -->
-<!-- Copyright (C) 2020, Jayesh Badwaik <jayesh@badwaik.in>          -->
+<!-- SPDX-License-Identifier: "CC-BY 4.0"                                   -->
+<!-- Copyright (C) 2020, Jayesh Badwaik <jayesh@badwaik.in>                 -->
 <!---------------------------------------------------------------------------->
 # Code of Conduct
 
@@ -8,8 +8,7 @@
 
 1. Project Maintainers: Anyone who is listed in the maintainers.md file.
 
-2. Project Leadership: The following members
-    1. Jayesh Badwaik
+2. Project Leadership: Anyone who is listed in the leadership.md file.
 
 ## Our Pledge
 
@@ -86,5 +85,5 @@ the project leadership. Decision of project leadership will be final.
 This Code of Conduct is adapted from the Contributor Covenant, version 1.4,
 available at https://www.contributor-covenant.org/version/1/4/code-of-conduct.html
 
-For answers to common questions about this code of conduct, see
-https://www.contributor-covenant.org/faq
+For answers to common questions about the Contributor Covenant code of
+conduct, see https://www.contributor-covenant.org/faq
