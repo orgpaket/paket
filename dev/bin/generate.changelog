@@ -3,17 +3,19 @@
 # SPDX-License-Identifier: "Apache-2.0 OR MIT"
 # Copyright (C) 2020, Jayesh Badwaik <jayesh@badwaik.in>
 #-------------------------------------------------------------------------------
-if [ "$#" -ne 1 ]; then
-	echo "Script requires an argument for the new version number."
+if [ "$#" -ne 2 ]; then
+	echo "Script requires:"
+	echo "1. New Tag"
+	echo "2. Start Commit"
 	exit 1
 fi
-VERSION=$1
-LAST_TAG=$(git describe --abbrev=0)
-echo "" | cat - changelog.md > temp && mv temp changelog.md
-echo "" | cat - changelog.md > temp && mv temp changelog.md
-git log $LAST_TAG...develop
---pretty=format:'-[\[%h\]](https://gitlab.version.fz-juelich.deorg/paket/paket/commit/%H)  %s' --reverse  | cat - changelog.md > temp && mv temp changelog.md
-echo "" | cat - changelog.md > temp && mv temp changelog.md
-echo $(date -u +"%Y-%m-%d %T UTC") | cat - changelog.md > temp && mv temp changelog.md
-echo "" | cat - changelog.md > temp && mv temp changelog.md
-echo "# $VERSION" | cat - changelog.md > temp && mv temp changelog.md
+WORKING_DIRECTORY=$(mktemp -p /tmp/ -d)
+NEW_TAG=$1
+START_COMMIT=$2
+git log $START_COMMIT...HEAD --pretty=tformat:"- [\[%h\]](https://gitlab.version.fz-juelich.deorg/paket/paket/commit/%H) %s " > $WORKING_DIRECTORY/generated_changelog
+cat changelog.md > $WORKING_DIRECTORY/old_changelog
+echo "# $NEW_TAG" > changelog.md
+echo -e "\n" >> changelog.md
+cat $WORKING_DIRECTORY/generated_changelog >> changelog.md
+echo -e "\n" >> changelog.md
+cat $WORKING_DIRECTORY/old_changelog  >> changelog.md
