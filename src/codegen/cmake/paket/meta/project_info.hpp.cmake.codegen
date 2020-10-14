@@ -45,7 +45,7 @@ struct project_info {
 
   auto version() const noexcept -> version
   {
-  return ::paket::meta::version();
+    return ::paket::meta::version();
   }
 
   auto homepage() const noexcept -> std::string
