@@ -10,9 +10,10 @@
 namespace paket {
 class compiler {
 public:
-  enum class underlying_enum { gcc = 1, clang = 2 };
+  enum class underlying_enum { unknown = 0, gcc = 1, clang = 2 };
 
 public:
+  static const compiler unknown;
   static const compiler gcc;
   static const compiler clang;
 
@@ -32,6 +33,8 @@ private:
   underlying_enum e_{};
 };
 
+constexpr compiler compiler::unknown
+  = compiler(compiler::underlying_enum::unknown);
 constexpr compiler compiler::gcc = compiler(compiler::underlying_enum::gcc);
 constexpr compiler compiler::clang = compiler(compiler::underlying_enum::clang);
 
