@@ -10,7 +10,7 @@ add_custom_target(vanadium_coverage)
 
 set(
   VANADIUM_COVERAGE_OUTPUT_DIRECTORY
-  ${PROJECT_BINARY_DIR}/.vanadium/coverage
+  ${PROJECT_BINARY_DIR}/vanadium/coverage
   CACHE PATH
   "Path to Store Output of Coverage Data"
   )

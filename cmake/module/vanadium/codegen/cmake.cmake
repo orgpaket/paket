@@ -4,8 +4,8 @@
 #-------------------------------------------------------------------------------
 function(target_vanadium_cmake_codegen TARGETNAME LINK_TYPE INDIR INSTALL_FLAG )
   file(RELATIVE_PATH REL_INDIR ${PROJECT_SOURCE_DIR} ${INDIR})
-  set(SRC_OUTDIR "${PROJECT_BINARY_DIR}/.vanadium/codegen/cmake/${REL_INDIR}/lib")
-  set(INC_OUTDIR "${PROJECT_BINARY_DIR}/.vanadium/codegen/cmake/${REL_INDIR}/include")
+  set(SRC_OUTDIR "${PROJECT_BINARY_DIR}/vanadium/codegen/cmake/${REL_INDIR}/lib")
+  set(INC_OUTDIR "${PROJECT_BINARY_DIR}/vanadium/codegen/cmake/${REL_INDIR}/include")
   file(GLOB_RECURSE CMAKE_HEADER_LIST "*.hpp.cmake.codegen")
   file(GLOB_RECURSE CMAKE_SOURCE_LIST "*.cpp.cmake.codegen")
 
@@ -29,7 +29,7 @@ function(target_vanadium_cmake_codegen TARGETNAME LINK_TYPE INDIR INSTALL_FLAG )
 
   foreach(INFILE ${CMAKE_HEADER_LIST})
     file(RELATIVE_PATH REL_INFILE ${INDIR} ${INFILE})
-    string(REPLACE ".cmake.codegen" "" REL_OUTFILE ${REL_INFILE})
+    string(REPLACE ".cmake.in" "" REL_OUTFILE ${REL_INFILE})
     set(OUTFILE "${INC_OUTDIR}/${REL_OUTFILE}")
     configure_file(${INFILE} ${OUTFILE} @ONLY)
   endforeach()

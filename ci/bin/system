@@ -50,6 +50,6 @@ pushd $BUILD_DIRECTORY
 
   if [[ $COVERAGE == "On" ]]; then
     ninja vanadium_coverage
-    cp -r .vanadium/coverage $ARTIFACT_DIRECTORY/coverage
+    cp -r vanadium/coverage $ARTIFACT_DIRECTORY/coverage
   fi
 popd

@@ -50,5 +50,5 @@ pushd $BUILD_DIRECTORY
     -B$BUILD_DIRECTORY -S$SOURCE_DIRECTORY
   cmake --build $BUILD_DIRECTORY --parallel 1
   ninja vanadium_doxygen
-  cp -r .vanadium/doxygen/ $ARTIFACT_DIRECTORY/doxygen
+  cp -r vanadium/doxygen/ $ARTIFACT_DIRECTORY/doxygen
 popd
