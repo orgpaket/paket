@@ -18,6 +18,7 @@ if(NOT BUILD_MODE IN_LIST BUILD_MODE_ARRAY)
   )
 endif()
 
+option(ENABLE_BACKTRACE "Build Benchmarks" ON)
 
 ################################################################################
 # Testing Option

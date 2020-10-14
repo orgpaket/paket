@@ -3,4 +3,5 @@
 # Copyright (C) 2020, Jayesh Badwaik <jayesh@badwaik.in>
 #-------------------------------------------------------------------------------
 target_sources(${LIBNAME} PRIVATE ${CMAKE_CURRENT_LIST_DIR}/paket.cpp)
+target_sources(${LIBNAME} PRIVATE ${CMAKE_CURRENT_LIST_DIR}/source_location.cpp)
 

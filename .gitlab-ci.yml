@@ -114,6 +114,7 @@ variables:
           $WORKING_DIRECTORY/artifact/ \
           artifact/coverage/$COMPILER/$RELEASE/$CXX_STANDARD/
       fi
+    - $WORKING_DIRECTORY/build/src/bin/paket
 
 ###############################################################################
 # Compiler
@@ -140,6 +141,7 @@ variables:
           $WORKING_DIRECTORY/artifact/ \
           artifact/coverage/$COMPILER/$RELEASE/$CXX_STANDARD/
       fi
+    - $WORKING_DIRECTORY/build/src/bin/paket
 
 ###############################################################################
 # Doxygen
