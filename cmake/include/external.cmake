@@ -12,3 +12,9 @@ endif()
 
 find_package(Boost REQUIRED)
 find_package(lyra REQUIRED)
+
+if(${CMAKE_SYSTEM_NAME} STREQUAL "Linux")
+  find_library(PAKET_LIBDL dl REQUIRED)
+  find_library(PAKET_LIBDW dw REQUIRED)
+  find_library(PAKET_LIBUNWIND unwind REQUIRED)
+endif()
