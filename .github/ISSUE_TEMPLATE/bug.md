@@ -21,5 +21,16 @@ on instructions to create a good MCVE (Minimal, Complete, Verifiable Example).
 - Compiler and Version:
 - paket Version:
 
+
+## Stacktrace (Optional)
+Please paste the generated stacktrace here. You can obtain one by running the
+program through a debugger for example. With gdb, the instructions would look
+somewhat like follows:
+
+```bash
+$ gdb --args ./paket <args>
+gdb> run
+```
+
 ## Any Additional Information
 
