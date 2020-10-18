@@ -42,7 +42,7 @@ variables:
     COMPILER_RELEASE: "10"
     COMPILER_PREFIX: /opt/cupstack/clang/10
     TOOLCHAIN_PREFIX: /opt/depstack/clang/10
-    RUNTIME_ENVIRONMENT: /opt/cupstack/clang/10/share/runtime/source.bash
+    RUNTIME_ENVIRONMENT: /opt/cupstack/clang/10/share/runtime.bash
     TOOLCHAIN_FILE: /opt/depstack/clang/10/share/toolchain/cmake/toolchain.cmake
     CLANG_FORMAT: /opt/cupstack/clang/10/bin/clang-format
     CLANG_TIDY: /opt/cupstack/clang/10/bin/clang-tidy

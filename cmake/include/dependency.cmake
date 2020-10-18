@@ -4,11 +4,6 @@
 #-------------------------------------------------------------------------------
 target_link_libraries(${LIBNAME} PUBLIC Boost::boost)
 target_link_libraries(${LIBNAME} PUBLIC bfg::lyra)
-
-if(ENABLE_BACKTRACE)
-  if(${CMAKE_SYSTEM_NAME} STREQUAL "Linux")
-    target_link_libraries(${LIBNAME} PUBLIC dl)
-    target_link_libraries(${LIBNAME} PUBLIC dw)
-    target_link_libraries(${LIBNAME} PUBLIC unwind)
-  endif()
-endif()
+target_link_libraries(${LIBNAME} PUBLIC Boost::stacktrace_backtrace)
+target_link_libraries(${LIBNAME} PUBLIC Boost::stacktrace_basic)
+target_link_libraries(${LIBNAME} PUBLIC dl)
