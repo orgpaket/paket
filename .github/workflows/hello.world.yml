@@ -1,8 +1,8 @@
-name: hello.world
+name: hello_world
 on: push
 jobs:
-  hello.world:
+  hello_world:
     runs-on: ubuntu-20.04
     steps:
       - name: echo
-        run: echo "Hello World!"
+        run: echo "Hello, World!"
