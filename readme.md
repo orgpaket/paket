@@ -4,7 +4,7 @@
 <!---------------------------------------------------------------------------->
 <div align="center">
 
-# paket : a template for a C++ codebase
+# paket : a userspace package manager
 -------
 
 </div>
